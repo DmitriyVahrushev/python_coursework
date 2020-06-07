@@ -1,0 +1,8 @@
+{%extends "layout.html"%}
+{% block content %}
+ <h3>Number of measurments by city</h3>
+{% for city, count in city_counts.items() %}
+    <p>{{ city }} : {{ count }} </p>
+{% endfor %}
+ <a class="btn btn-primary" href="/" role="button">Record measurments</a>
+{% endblock%}    
