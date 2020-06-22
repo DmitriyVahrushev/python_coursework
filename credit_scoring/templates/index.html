@@ -1,0 +1,54 @@
+{%extends "layout.html"%}
+{% block content %}
+<div class="content-section">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Проверить кредитоспособонсть</legend>
+            <div class="form-group">
+                {{  form.RevolvingUtilizationOfUnsecuredLines.label(class="form-control-label") }}
+                {{  form.RevolvingUtilizationOfUnsecuredLines(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.age.label(class="form-control-label") }}
+                {{  form.age(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.NumberOfTime30DaysPastDueNotWorse.label(class="form-control-label") }}
+                {{  form.NumberOfTime30DaysPastDueNotWorse(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.DebtRatio.label(class="form-control-label") }}
+                {{  form.DebtRatio(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.MonthlyIncome.label(class="form-control-label") }}
+                {{  form.MonthlyIncome(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.NumberOfOpenCreditLinesAndLoans.label(class="form-control-label") }}
+                {{  form.NumberOfOpenCreditLinesAndLoans(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.NumberOfTimes90DaysLate.label(class="form-control-label") }}
+                {{  form.NumberOfTimes90DaysLate(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.NumberRealEstateLoansOrLines.label(class="form-control-label") }}
+                {{  form.NumberRealEstateLoansOrLines(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.NumberOfTime60DaysPastDueNotWorse.label(class="form-control-label") }}
+                {{  form.NumberOfTime60DaysPastDueNotWorse(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{  form.NumberOfDependents.label(class="form-control-label") }}
+                {{  form.NumberOfDependents(class="form-control form-control-lg") }}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class = "btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+{% endblock%}    
